@@ -1,0 +1,8 @@
+version: "2"
+
+services:
+   test:
+     build: .
+     image:    test
+     container_name: test
+     command: npm start

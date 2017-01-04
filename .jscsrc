@@ -1,0 +1,11 @@
+{
+  "preset": "google",
+  "requireCommaBeforeLineBreak": false,
+  "disallowMultipleVarDecl": false,
+  "disallowSpacesInAnonymousFunctionExpression": false,
+  "requireTrailingComma": false,
+  "maximumLineLength": {
+    "value": 100,
+    "allExcept": ["require", "regex", "comments", "urlComments"]
+  }
+}
