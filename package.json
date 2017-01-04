@@ -1,6 +1,6 @@
 {
   "name": "docker-node-version",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "PostInstall utility for updating docker files with version from package.json",
   "main": "index.js",
   "scripts": {
