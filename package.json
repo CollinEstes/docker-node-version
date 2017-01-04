@@ -7,7 +7,7 @@
     "lint": "./node_modules/jscs/bin/jscs src -x",
     "test": "./node_modules/.bin/_mocha --full-trace --recursive",
     "prevesion": "npm run lint && npm test"
-  }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://CollinEstes@github.com/CollinEstes/docker-node-version.git"
