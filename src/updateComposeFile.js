@@ -9,9 +9,14 @@ function processFile(data, version) {
     ;
 
   for(let i = 0; i < lines.length; i++) {
-    if (lines[i].includes('image')) {
+    if (lines[i].includes('image:')) {
       // append version to image name
-      newLines.push(`${lines[i]}:${version}`);
+      let splitLine = lines[i].split(':')
+        , image = splitLine[0]
+        , name = splitLine[1]
+        ;
+
+      newLines.push(`${image}:${name}:${version}`);
     } else {
       newLines.push(lines[i]);
     }

@@ -29,7 +29,7 @@ function checkForVersion(data, version) {
 describe('updateComposeSpec', function () {
 
     describe('Nominal operation', function () {
-      afterEach(function (done) {
+      after(function (done) {
           // set compose file back
           resetCompose(__dirname)
             .then(done)
@@ -37,7 +37,7 @@ describe('updateComposeSpec', function () {
             ;
       });
 
-      it('should operate correctly', function (done) {
+      it('should add initial version when none exist', function (done) {
           const VERSION = '1.0.0';
           updateCompose(__dirname, VERSION)
             .then(function () {
@@ -52,6 +52,23 @@ describe('updateComposeSpec', function () {
                 });
             })
             .catch(done)
+      });
+
+      it('should update version when one is already there', function (done) {
+        const NEW_VERSION = '2.0.0';
+        updateCompose(__dirname, NEW_VERSION)
+          .then(function () {
+            // read compose and check for update
+            fs.readFile(path.join(__dirname, 'docker-compose.yml'), 'utf-8', function(err, data) {
+              if (err) {
+                return done(err);
+              }
+
+              expect(checkForVersion(data.toString(), NEW_VERSION)).to.equal(true);
+              done();
+            });
+          })
+          .catch(done)
       });
     });
 });

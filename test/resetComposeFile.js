@@ -11,7 +11,7 @@ function processFile(data) {
   for(let i = 0; i < lines.length; i++) {
     if (lines[i].includes('image') && lines[i].includes(':')) {
       // remove version
-      newLines.push(`     image: ${lines[i].split('image:')[1].split(':')[0]}`);
+      newLines.push(`     image:${lines[i].split('image:')[1].split(':')[0]}`);
     } else {
       newLines.push(lines[i]);
     }

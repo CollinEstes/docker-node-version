@@ -1,5 +1,5 @@
 {
-  "name": "docker-version",
+  "name": "docker-node-version",
   "version": "1.0.0",
   "description": "PostInstall utility for updating docker files with version from package.json",
   "main": "index.js",
@@ -7,10 +7,7 @@
     "lint": "./node_modules/jscs/bin/jscs src -x",
     "test": "./node_modules/.bin/_mocha --full-trace --recursive",
     "prevesion": "npm run lint && npm test"
-  },
-  "bin": {
-    "node-docker-version": "index.js"
-  },
+  }
   "repository": {
     "type": "git",
     "url": "git+https://CollinEstes@github.com/CollinEstes/docker-node-version.git"
