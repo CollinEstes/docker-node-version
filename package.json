@@ -1,7 +1,7 @@
 {
   "name": "docker-node-version",
   "version": "1.0.1",
-  "description": "PostInstall utility for updating docker files with version from package.json",
+  "description": "PostInstall utility for updating docker-compose file with version from package.json",
   "main": "index.js",
   "scripts": {
     "lint": "./node_modules/jscs/bin/jscs src -x",

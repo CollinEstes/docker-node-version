@@ -1,5 +1,5 @@
 # docker-node-version
-PostInstall utility for applying version to Dockerfile and Docker-compose files in Node.js projects.
+PostInstall utility for applying version to Docker-compose files in Node.js projects.
 
 
 When using docker/docker-compose to operate a Node.js project,
